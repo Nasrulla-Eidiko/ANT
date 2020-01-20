@@ -1,0 +1,39 @@
+<project name="HTTPTASK" default="init" basedir="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace">
+ <description>IIB Continuous Integration Demo (main script)</description>
+ <target name="init">
+ <tstamp />
+ <property environment="evn" />
+ <property name="path.build" value="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\SHARED_VARIABLE_TEST\Build" />
+ <property name="path.tools" value="C:\Program Files\IBM\ACE\11.0.0.7\tools" />
+ <property name="path.ace" value="C:\Program Files\IBM\ACE\11.0.0.7\server\bin" />
+ <property name="base.dir" value="." />
+ <property name="broker.file" value="${path.build}/brokerFile.txt" />
+ <property name="ace.svr" value="IS" />
+ <antcall target="rp" />
+ </target>
+ <target name="rp">
+ <!-- build workspace and create BAR file -->
+ <echo message="Creating Bar" />
+ <property name="ace.bar" value="rp.bar" />        
+ <exec executable="${path.tools}/mqsicreatebar">       
+ <arg value="-data" />       
+ <arg value="${base.dir}" />       
+ <arg value="-b" />       
+ <arg value="${ace.bar}" />
+ <arg value="-a" />       
+ <arg value="SHARED_VARIABLE_TEST" />
+ <arg value="-p" />       
+ <arg value="SHARED_VARIABLE_TEST" />  
+ </exec>   
+ <echo message="Copying bar file" />
+ <copy file="rp.bar" todir="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\SHARED_VARIABLE_TEST\Build" />
+ <echo message="Copied Successfully" />
+ <echo message="Deploying Bar"/>
+ <exec dir="${path.build}" executable="Deploy.bat" >
+  <arg value="../${broker.file}" />       
+ <arg value ="${ace.svr}" />       
+ <arg value="../${ace.bar}" /> 
+ </exec>
+ <echo message="Deployement successful" />
+ </target>
+</project>

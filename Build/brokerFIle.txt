@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?> <IntegrationNodeConnectionParameters Version="11.0.0.7" host="192.168.2.4" listenerPort="4414" userName="Sreenivas Bandaru" password="sarasu10" xmlns="http://www.ibm.com/xmlns/prod/ace/11.0.0.7"/> 
