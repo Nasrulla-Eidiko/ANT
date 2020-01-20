@@ -25,11 +25,11 @@
  <arg value="-p" />       
  <arg value="HTTPTASK" />  
  </exec>   
- <echo message="Copying bar file" />
- <copy file="rp.bar" todir="${path.build}" />
- <echo message="Copied Successfully" />
+ <echo message="moving bar file" />
+ <move file="rp.bar" todir="${path.build}" />
+ <echo message="moved Successfully" />
  <echo message="Deploying Bar"/>
-  <exec dir="${path.build}" executable="">
+  <exec dir="${path.build}" executable="Deploy.bat">
   <arg value="../${broker.file}" />       
  <arg value ="${ace.svr}" />       
  <arg value="../${ace.bar}" /> 
