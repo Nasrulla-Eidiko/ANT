@@ -21,9 +21,9 @@
  <arg value="-b" />       
  <arg value="${ace.bar}" />
  <arg value="-a" />       
- <arg value="SHARED_VARIABLE_TEST" />
+ <arg value="HTTPTASK" />
  <arg value="-p" />       
- <arg value="SHARED_VARIABLE_TEST" />  
+ <arg value="HTTPTASK" />  
  </exec>   
  <echo message="Copying bar file" />
  <copy file="rp.bar" todir="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\SHARED_VARIABLE_TEST\Build" />
