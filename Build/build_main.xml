@@ -29,13 +29,7 @@
  <copy file="rp.bar" todir="${path.build}" />
  <echo message="Copied Successfully" />
  <echo message="Deploying Bar"/>
- <exec executable="${path.ace}/mqsiprofile.cmd & ${path.ace}/mqsideploy" >
- <arg value="-n" />
- <arg value="TEST" />
- <arg value="-e" />
- <arg value="IS" />
- <arg value="-a" />
- <arg value="${ace.bar}" />
+  <exec dir="${path.build}" executable="Deploy.bat">
   <arg value="../${broker.file}" />       
  <arg value ="${ace.svr}" />       
  <arg value="../${ace.bar}" /> 
