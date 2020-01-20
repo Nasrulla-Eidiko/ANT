@@ -26,10 +26,16 @@
  <arg value="HTTPTASK" />  
  </exec>   
  <echo message="Copying bar file" />
- <copy file="rp.bar" todir="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\SHARED_VARIABLE_TEST\Build" />
+ <copy file="rp.bar" todir="${path.build}" />
  <echo message="Copied Successfully" />
  <echo message="Deploying Bar"/>
- <exec dir="${path.build}" executable="Deploy.bat" >
+ <exec executable="${path.ace}/mqsiprofile.cmd && ${path.ace}/mqsideploy" >
+ <arg value="-n" />
+ <arg value="TEST" />
+ <arg value="-e" />
+ <arg value="IS" />
+ <arg value="-a" />
+ <arg value="${ace.bar}" />
   <arg value="../${broker.file}" />       
  <arg value ="${ace.svr}" />       
  <arg value="../${ace.bar}" /> 
