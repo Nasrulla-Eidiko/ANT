@@ -3,7 +3,7 @@
  <target name="init">
  <tstamp />
  <property environment="evn" />
- <property name="path.build" value="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\SHARED_VARIABLE_TEST\Build" />
+ <property name="path.build" value="C:\Users\Sreenivas Bandaru\IBM\ACET11\workspace\HTTPTASK\Build" />
  <property name="path.tools" value="C:\Program Files\IBM\ACE\11.0.0.7\tools" />
  <property name="path.ace" value="C:\Program Files\IBM\ACE\11.0.0.7\server\bin" />
  <property name="base.dir" value="." />
