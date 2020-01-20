@@ -29,7 +29,7 @@
  <copy file="rp.bar" todir="${path.build}" />
  <echo message="Copied Successfully" />
  <echo message="Deploying Bar"/>
- <exec executable="${path.ace}/mqsiprofile.cmd && ${path.ace}/mqsideploy" >
+ <exec executable="${path.ace}/mqsiprofile.cmd & ${path.ace}/mqsideploy" >
  <arg value="-n" />
  <arg value="TEST" />
  <arg value="-e" />
