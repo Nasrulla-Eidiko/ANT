@@ -1,1 +1,1 @@
-C:\"ProgramFiles"\IBM\ACE\11.0.0.7\server\bin\mqsiprofile.cmd && C:\"Program Files"\IBM\ACE\11.0.0.7\server\bin\mqsideploy -n TEST -e IS -a rp.bar -m
+C:\"Program Files"\IBM\ACE\11.0.0.7\tools\mqsiprofile.cmd && C:\"Program Files"\IBM\ACE\11.0.0.7\tools\mqsideploy -n TEST -e IS -a rp.bar -m

@@ -30,9 +30,9 @@
  <echo message="moved Successfully" />
  <echo message="Deploying Bar"/>
   <exec dir="${path.build}" executable="Deploy.bat">
-  <arg value="../${broker.file}" />       
+  <arg value="${broker.file}" />       
  <arg value ="${ace.svr}" />       
- <arg value="../${ace.bar}" /> 
+ <arg value="${ace.bar}" /> 
  </exec>
  <echo message="Deployement successful" />
  </target>
